@@ -1,3 +1,6 @@
+import random
+import time
+
 def insertion_sort(array):
     for i in range(1, len(array)):
         x = array[i]
@@ -8,6 +11,10 @@ def insertion_sort(array):
         print(f"{array=}")
 
     
-array = [5, 1, 9, 8, 3, 4, 0, 2, 7, 6]
-insertion_sort(array)
-print(array)
+if __name__ == "__main__":
+    random.seed(time.time())
+    array = list(range(10))
+    random.shuffle(array)
+
+    insertion_sort(array)
+    print(f"{array=}")
